@@ -24,7 +24,7 @@ node {
 				del C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResultHTML.zip /s /q
 				rmdir C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResultHTML /q /s
 				mkdir C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResultHTML
-				C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\jmeter.bat -n -t Login_Call.jmx -l C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResult\\result.csv -e -o C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResultHTML
+				C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\jmeter.bat -Jthreads=1 -n -t Login_Call.jmx -l C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResult\\result.csv -e -o C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResultHTML
 			"""	
         }
       }
