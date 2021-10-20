@@ -1,10 +1,29 @@
 node {
-   stage 'Build Application'
-   
-   echo 'Compilation is done'
-   stage 'Deploy Application'
-   
-   echo 'Deploy is done'
-   stage 'Execute JMeter Performance Tests'
-   build job: 'WWE-Performance'
-}
+
+      stage('Initialise') {
+        /* Checkout the scripts */
+        checkout scm: [
+                $class: 'GitSCM',
+                userRemoteConfigs: [
+                        [
+                                url: "https://github.com/gopalcs1988/PerformanceJmeter.git"
+                        ]
+                ],
+                branches: [[name: "master"]]
+        ], poll: false
+      }
+
+      stage('Complete any setup steps') {
+		echo "Complete set-up steps"
+      }
+
+      stage('Execute Performance Tests') {
+        dir("${WORKSPACE}/scripts") {
+			bat 'C:/Users/rarumuga/Downloads/Softwares/apache-jmeter-5.4.1/bin/jmeter.bat -n -t Login_Call.jmx -l C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResult\result.csv -e -o C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML'
+        }
+      }
+
+      stage('Analyse Results') {
+		echo "Analyse results"
+      }
+    }
