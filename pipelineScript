@@ -30,6 +30,17 @@ node {
       }
 
       stage('Publish Results') {
-		publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResultHTML', reportFiles: 'index.html', reportName: 'Performance Report', reportTitles: ''])
+	publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResultHTML', reportFiles: 'index.html', reportName: 'Performance Report', reportTitles: ''])
+      }
+      
+      stage('Email Notification'){
+      	emailext( 
+	body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+			Check the HTML results at $HTML_REPORT
+
+			Check console output at $CONSOLE to view the results.''', 
+	subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', 
+	to: 'rajagopal.arumugam@genesys.com')
       }
     }
