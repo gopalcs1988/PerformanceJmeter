@@ -1,0 +1,10 @@
+node {
+   stage 'Build Application'
+   
+   echo 'Compilation is done'
+   stage 'Deploy Application'
+   
+   echo 'Deploy is done'
+   stage 'Execute JMeter Performance Tests'
+   build job: 'WWE-Performance'
+}
