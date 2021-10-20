@@ -19,7 +19,7 @@ node {
 
       stage('Execute Performance Tests') {
         dir("${WORKSPACE}/scripts") {
-			bat 'C:/Users/rarumuga/Downloads/Softwares/apache-jmeter-5.4.1/bin/jmeter.bat -n -t Login_Call.jmx -l C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResult\result.csv -e -o C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML'
+			bat 'C:/Users/rarumuga/Downloads/Softwares/apache-jmeter-5.4.1/bin/jmeter.bat -n -t Login_Call.jmx -l C:/Users/rarumuga/Downloads/Softwares/apache-jmeter-5.4.1/bin/loginResult/result.csv -e -o C:/Users/rarumuga/Downloads/Softwares/apache-jmeter-5.4.1/bin/loginResultHTML'
         }
       }
 
