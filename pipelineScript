@@ -30,6 +30,6 @@ node {
       }
 
       stage('Publish Results') {
-		publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResultHTML', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+		publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResultHTML', reportFiles: 'index.html', reportName: 'Performance Report', reportTitles: ''])
       }
     }
