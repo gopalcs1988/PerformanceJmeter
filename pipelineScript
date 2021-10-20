@@ -37,9 +37,10 @@ node {
       	emailext( 
 	body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
 
-			Check the HTML results at $HTML_REPORT
+		 Check the HTML results at $HTML_REPORT
 
-			Check console output at $CONSOLE to view the results.''', 
+		 Check console output at $CONSOLE to view the results.''', 
+		 
 	subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', 
 	to: 'rajagopal.arumugam@genesys.com')
       }
