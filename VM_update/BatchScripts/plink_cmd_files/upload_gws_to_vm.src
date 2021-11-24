@@ -5,7 +5,5 @@ ls -al
 
 echo "Stopping/updating/restarting services"
 
-
-
 sudo ./update.sh
 exit
