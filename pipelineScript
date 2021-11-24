@@ -12,8 +12,10 @@ node {
                 branches: [[name: "master"]]
         ], poll: false
       }
-	  
-	
+
+      stage('Complete any setup steps') {		
+	 build 'GWS_Update'
+    }	  
 	
 	stage('Execute Performance Tests') {
         dir("${WORKSPACE}") {
