@@ -1,0 +1,1 @@
+cat %1 | grep -f E:\tools\unix\filter.txt | grep -v -f  E:\tools\unix\filter2.txt > E:\GCTI\Webservices\logs\filtered_robotTest.rblog

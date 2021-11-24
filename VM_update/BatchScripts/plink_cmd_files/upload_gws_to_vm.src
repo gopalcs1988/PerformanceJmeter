@@ -1,0 +1,9 @@
+cd /home/genesys/gws-deployment
+
+echo "GWS folder content:"
+ls -al
+
+echo "Stopping/updating/restarting services"
+sudo ./update.sh
+
+exit

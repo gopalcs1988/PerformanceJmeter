@@ -1,0 +1,7 @@
+lcd BART_STORE
+cd BART_LOGS
+dir
+
+mget BART_FILE_PATTERN
+rm BART_FILE_PATTERN
+bye
