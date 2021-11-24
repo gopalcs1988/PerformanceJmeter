@@ -15,6 +15,7 @@ node {
 
       stage('Complete any setup steps') {		
 	 build 'GWS_Update'
+	 sleep 120
     }	  
 	
 	stage('Execute Performance Tests') {
