@@ -15,7 +15,7 @@ node {
 
       stage('Complete any setup steps') {
 		echo "Updating the GWS"
-		dir("${WORKSPACE\\VM_Update\\BatchScripts}"){
+		dir("${WORKSPACE}\\VM_Update\\BatchScripts"){
 			bat "upload_gws_to_vm.bat bsqav3rajagopal genesys genesys"		
       }      
     }
