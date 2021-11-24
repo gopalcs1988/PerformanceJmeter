@@ -4,7 +4,7 @@ echo "GWS folder content:"
 ls -al
 
 echo "Stopping/updating/restarting services"
-docker login  https://pureengage-docker-staging.jfrog.io/ -u rarumuga -p AKCp8ihAxXfTPDTLpvELnvtKDsyuWzfcshdW1jeLcwvteY6swUYzY4pxKV6ZKVYbuKAedSQgG
+
 
 sudo ./update.sh
 exit
