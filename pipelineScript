@@ -20,7 +20,7 @@ node {
     }	  
 
       stage('Wait For Environment UP')	{
-		sleep 60
+		sleep 120
 	}
 	
 	stage('Execute Performance Tests') {
