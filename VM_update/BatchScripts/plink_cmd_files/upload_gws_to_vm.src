@@ -5,7 +5,7 @@ ls -al
 
 echo "Stopping/updating/restarting services"
 
-docker login -u rarumuga -p AKCp8ihAxXfTPDTLpvELnvtKDsyuWzfcshdW1jeLcwvteY6swUYzY4pxKV6ZKVYbuKAedSQgG pureengage-docker-dev.jfrog.io
+
 
 sudo ./update.sh
 exit
