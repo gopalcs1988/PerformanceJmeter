@@ -19,7 +19,7 @@ node {
       }      
     }
 	
-	stage ("Wait For Environment UP")
+	stage('Wait For Environment UP')
 	{
 		sh 'sleep 30'
 	}
