@@ -19,6 +19,11 @@ node {
       }      
     }
 	
+	stage ("Wait For Environment UP")
+	{
+		sh 'sleep 30'
+	}
+	
 	stage('Execute Performance Tests') {
         dir("${WORKSPACE}") {
 			bat """
