@@ -18,3 +18,4 @@ node {
 			bat "upload_gws_to_vm.bat bsqav3rajagopal genesys genesys"		
       }      
     }
+}
