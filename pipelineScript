@@ -12,6 +12,12 @@ node {
                 branches: [[name: "master"]]
         ], poll: false
       }
+	  
+	  stage('Complete any setup steps') {		
+		dir("${WORKSPACE}\\VM_Update\\BatchScripts") {
+			bat "upload_gws_to_vm.bat bsqav3rajagopal genesys genesys"		
+      }      
+    }
 
       stage('Wait For Environment UP')	{
 		sleep 30
