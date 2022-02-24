@@ -12,9 +12,8 @@ node {
                 branches: [[name: "master"]]
         ], poll: false
       }
-
       
-	stage('Execute Performance Tests') {
+      stage('Execute Performance Tests') {
         dir("${WORKSPACE}") {
 			bat """
 				del C:\\Users\\rarumuga\\Downloads\\Softwares\\apache-jmeter-5.4.1\\bin\\loginResult\\*.* /s /q
