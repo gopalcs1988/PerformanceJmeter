@@ -1,0 +1,39 @@
+cd C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\loginResult
+del C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResult\*.* /s /q
+rmdir C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML /q /s
+
+mkdir C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML
+
+cd C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin
+
+jmeter -n -t C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\Login_Call.jmx -l C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResult\result.csv -e -o C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML
+
+jmeter -n -t C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\Login_Final.jmx -l C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\WWE_result.jtl -e -o C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML
+
+jmeter -Jthreads=2 -n -t C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\Login_Final.jmx -l C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResult\result.csv -e -o C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML
+
+<arguments>-Xrs -Xmx256m -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle -Dhudson.model.DirectoryBrowserSupport.CSP="sandbox allow-scripts; default-src 'self'; style-src 'self' 'unsafe-inline';" -jar "%BASE%\jenkins.war" --httpPort=8080 --webroot="%BASE%\war"</arguments>
+
+<arguments>-Xrs -Xmx256m -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle -Dhudson.model.DirectoryBrowserSupport.CSP="" -jar "C:\Program Files\Jenkins\jenkins.war" --httpPort=8080 --webroot="%LocalAppData%\Jenkins\war"</arguments>
+
+<arguments>-Xrs -Xmx1048m -XX:MaxPermSize=512m -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle "-Dhudson.model.DirectoryBrowserSupport.CSP= " -jar "%BASE%\jenkins.war" --httpPort=8080</arguments>
+
+java -Dhudson.model.DirectoryBrowserSupport.CSP= -jar jenkins.war
+
+----------------------------------
+
+del C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResult\*.* /s /q
+
+del C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML.zip /s /q
+
+rmdir C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML /q /s
+
+mkdir C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML
+
+cd C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin
+
+jmeter -Jthreads=1 -n -t C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\Login_Final.jmx -l C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResult\result.csv -e -o C:\Users\rarumuga\Downloads\Softwares\apache-jmeter-5.4.1\bin\loginResultHTML
+
+
+java -Dmail.smtp.starttls.enable="true" -Dhudson.model.DirectoryBrowserSupport.CSP= -jar jenkins.war
+
